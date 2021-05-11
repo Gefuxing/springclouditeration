@@ -1,0 +1,9 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    zookeeper:
+      connect-string: 10.130.20.64:2181,10.130.20.207:2181,10.130.20.112:2181

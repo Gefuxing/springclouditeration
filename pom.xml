@@ -15,6 +15,7 @@
         <module>eureka2</module>
         <module>payment2</module>
         <module>payment3</module>
+        <module>consumezk2</module>
 
 
     </modules>
