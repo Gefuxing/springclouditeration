@@ -16,6 +16,8 @@
         <module>payment2</module>
         <module>payment3</module>
         <module>consumezk2</module>
+        <module>payment4</module>
+        <module>consume4</module>
 
 
     </modules>
