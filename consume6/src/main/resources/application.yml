@@ -19,9 +19,9 @@ eureka:
       lease-expiration-duration-in-seconds:  2
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
-#ribbon:
-#  ConnectTimeout: 60000 # 连接超时时间(ms)
-#  ReadTimeout: 60000 # 通信超时时间(ms)
+ribbon:
+  ConnectTimeout: 60000 # 连接超时时间(ms)
+  ReadTimeout: 60000 # 通信超时时间(ms)
 #
 #hystrix:
 #  command:

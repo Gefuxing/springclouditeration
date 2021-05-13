@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author gefuxing
@@ -31,8 +32,9 @@ public class PaymentController {
     @Value("${server.port}")
     private String port;
     @GetMapping("/payment/{id}")
-    public CommonResult getPayment(@PathVariable Long id) {
+    public CommonResult getPayment(@PathVariable Long id) throws InterruptedException {
         Payment payment = paymentService.getPayment(id);
+
         return new CommonResult(200, "成功+port"+port,payment);
     }
 
@@ -53,6 +55,13 @@ public class PaymentController {
             log.info(instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
         }
         return this.discoveryClient;
+    }
+
+
+    @GetMapping(value = "/payment/feign/timeout")
+    public String paymentFeignTimeout(){
+        try { TimeUnit.SECONDS.sleep(3); }catch (Exception e) {e.printStackTrace();}
+        return port+"port";
     }
 
 }

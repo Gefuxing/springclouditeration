@@ -19,8 +19,12 @@ public class PaymentControllerClient {
 
 
     @GetMapping(value = "/consumer/payment/{id}")
-    public CommonResult getPaymentById(@PathVariable(value = "id") Long id){
-       return paymentService.getPayment(id);
+    public CommonResult getPaymentById(@PathVariable(value = "id") Long id) {
+        return paymentService.getPayment(id);
+    }
+    @GetMapping(value = "/consumer/payment/timeout")
+    public String timeout() {
+        return paymentService.paymentFeignTimeout();
     }
 
 }

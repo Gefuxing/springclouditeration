@@ -18,8 +18,9 @@ public class PaymentServiceImpl  implements PaymentService {
     private PaymentMapper paymentMapper;
 
     @Override
-    public Payment getPayment(Long id) {
+    public Payment getPayment(Long id) throws InterruptedException {
         System.out.println("我爱你");
+
         return paymentMapper.select(id);
     }
 

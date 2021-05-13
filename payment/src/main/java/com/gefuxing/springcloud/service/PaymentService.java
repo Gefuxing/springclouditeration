@@ -8,7 +8,7 @@ import com.gefuxing.springcloud.entities.Payment;
  */
 
 public interface PaymentService {
-    Payment getPayment(Long id);
+    Payment getPayment(Long id) throws InterruptedException;
 
     int postPayment(Payment payment);
 }

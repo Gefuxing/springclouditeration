@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author gefuxing
  * @create 2021/4/5 19:59
@@ -29,5 +31,12 @@ public class PaymentController {
     public CommonResult postPayment(@RequestBody Payment payment) {
         int a = paymentService.postPayment(payment);
         return new CommonResult(200, "成功", a);
+    }
+
+
+    @GetMapping(value = "/payment/feign/timeout")
+    public String paymentFeignTimeout(){
+        try { TimeUnit.SECONDS.sleep(3); }catch (Exception e) {e.printStackTrace();}
+        return port+"port";
     }
 }
