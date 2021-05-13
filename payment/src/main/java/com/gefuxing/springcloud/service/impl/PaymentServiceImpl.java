@@ -19,6 +19,7 @@ public class PaymentServiceImpl  implements PaymentService {
 
     @Override
     public Payment getPayment(Long id) {
+        System.out.println("我爱你");
         return paymentMapper.select(id);
     }
 

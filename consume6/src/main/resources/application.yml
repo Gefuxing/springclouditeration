@@ -1,0 +1,32 @@
+server:
+  port: 9006
+
+spring:
+  application:
+    name: cloud-consume-service
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    instance:
+      instance-id: client
+      prefer-ip-address: true
+      lease-renewal-interval-in-seconds:  1
+      lease-expiration-duration-in-seconds:  2
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+#ribbon:
+#  ConnectTimeout: 60000 # 连接超时时间(ms)
+#  ReadTimeout: 60000 # 通信超时时间(ms)
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMillisecond: 60000 # 熔断超时时长：60000ms

@@ -10,7 +10,7 @@
     <modules>
         <module>payment</module>
         <module>eureka1</module>
-        <module>consume</module>
+
         <module>consume1</module>
         <module>eureka2</module>
         <module>payment2</module>
@@ -18,6 +18,9 @@
         <module>consumezk2</module>
         <module>payment4</module>
         <module>consume4</module>
+
+        <module>consume5</module>
+        <module>consume6</module>
 
 
     </modules>
