@@ -1,3 +1,7 @@
+logging:
+  level:
+    com.gefuxing.service.*: debug
+  config: classpath:logback-spring.xml
 server:
   port: 9006
 
@@ -29,4 +33,6 @@ ribbon:
 #      execution:
 #        isolation:
 #          thread:
+
 #            timeoutInMillisecond: 60000 # 熔断超时时长：60000ms
+
