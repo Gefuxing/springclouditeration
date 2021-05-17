@@ -19,8 +19,12 @@
         <module>payment4</module>
         <module>consume4</module>
 
-        <module>consume5</module>
+
         <module>consume6</module>
+        <module>payment-hystrix-8007</module>
+        <module>consume-hystrix-8007</module>
+        <module>hystrix-8008</module>
+        <module>geteway</module>
 
 
     </modules>

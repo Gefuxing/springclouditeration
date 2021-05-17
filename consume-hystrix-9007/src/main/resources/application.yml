@@ -1,0 +1,23 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: cloud-consume-hystrix-9007
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+
+ribbon:
+  ConnectTimeout: 60000 # 连接超时时间(ms)
+  ReadTimeout: 60000 # 通信超时时间(ms)
+
+feign:
+  hystrix:
+    enabled: true #如果

@@ -1,0 +1,16 @@
+server:
+  port: 8007
+spring:
+  application:
+    name: cloud-provider-hystrix-payment
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+ribbon:
