@@ -25,6 +25,9 @@
         <module>consume-hystrix-8007</module>
         <module>hystrix-8008</module>
         <module>geteway</module>
+        <module>config</module>
+        <module>configclient3355</module>
+        <module>configclient3366</module>
 
 
     </modules>

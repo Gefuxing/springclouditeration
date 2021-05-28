@@ -1,0 +1,37 @@
+
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/Gefuxing/springcloudconfig.git
+          search-paths:
+            - /**
+          default-label: master
+          basedir: target/config
+  rabbitmq:
+    host: 10.60.128.134
+    port: 28183
+    username: admin
+    password: admin
+#          skip-ssl-validation: true
+#          username: 819639401@qq.com
+#          password: 819639401@qq.com
+#      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
