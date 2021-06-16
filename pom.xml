@@ -28,6 +28,18 @@
         <module>config</module>
         <module>configclient3355</module>
         <module>configclient3366</module>
+        <module>streamMQProvider</module>
+        <module>streamConsume</module>
+        <module>streamConsume8803</module>
+        <module>streamconsume8802</module>
+        <module>cloudalibaba-provider-payment9001</module>
+        <module>cloudalibaba-consumer-nacos-order9003</module>
+        <module>cloud-config-nacos-client3377</module>
+        <module>websocket-consume-8081</module>
+        <module>websocket-produce-8080</module>
+        <module>seata-order</module>
+        <module>seata-storage</module>
+        <module>seata-account</module>
 
 
     </modules>

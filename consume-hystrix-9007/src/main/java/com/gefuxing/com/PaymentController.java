@@ -1,5 +1,6 @@
 package com.gefuxing.com;
 
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @Slf4j
-//@DefaultProperties(defaultFallback = "paymentTimeOutFallbackMethod")         //默认降级
+@DefaultProperties(defaultFallback = "paymentTimeOutFallbackMethod")         //默认降级
 public class PaymentController {
 
     @Resource

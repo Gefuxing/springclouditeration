@@ -20,7 +20,7 @@ spring:
 
 eureka:
   instance:
-    hostname: cloud-gateway-service
+    hostname: cloud-gateway-com.service
   client:
     service-url:
       register-with-eureka: true

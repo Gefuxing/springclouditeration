@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="gefuxing.mapper.StorageMapper">
+
+
+
+    <update id="update">
+        update t_order set status = 1
+        where user_id=#{userId} and status = #{status};
+    </update>
+
+    <update id="changeStorage">
+
+     update t_storage set
+      used=#{count},
+      residue=100-#{count}
+      where product_id=#{productId} ;
+
+    </update>
+
+
+
+</mapper>
+
+
+
