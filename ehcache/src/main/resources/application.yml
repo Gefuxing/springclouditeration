@@ -1,0 +1,13 @@
+
+
+server:
+  port: 9090
+
+spring:
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+logging:
+  level:
+    com.xkcoding: debug

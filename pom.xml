@@ -40,6 +40,7 @@
         <module>seata-order</module>
         <module>seata-storage</module>
         <module>seata-account</module>
+        <module>ehcache</module>
 
 
     </modules>
