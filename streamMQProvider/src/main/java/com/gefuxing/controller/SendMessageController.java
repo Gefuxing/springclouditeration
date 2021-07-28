@@ -28,5 +28,13 @@ public class SendMessageController
     {
         return mqservice1.getName(name);
     }
+
+    public static void main(String[] args) {
+        //String topic= "mod-vki2o57n3u1625121174424";
+        String topic= "mod-vki2o57n3u1625121174424";
+
+        int a= Math.abs(topic.hashCode()) % 5;
+        System.out.println(a);
+    }
 }
 
